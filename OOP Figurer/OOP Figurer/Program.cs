@@ -10,11 +10,18 @@ namespace OOP_Figurer
     {
         static void Main(string[] args)
         {
-            Kvadrat k1 = new Kvadrat { Size = 40 };
-            Cirkel c1 = new Cirkel { Size = 20 };
+            //Opretter en liste til og sætte figurer ind
+            List<Figur> Figurliste = new List<Figur>();
+            Figurliste.Add(new Kvadrat(2));
+            Figurliste.Add(new Cirkel(8));
 
-            k1.GetAreal();
+            //For hver linjie i listen udskriver den hvad der står på linjien
+            foreach (var f in Figurliste)
+            {
+                Console.WriteLine(f.UdskrivFigur());
+            }
 
+            //Slut
             Console.ReadKey();
         }
     }

@@ -8,12 +8,13 @@ namespace OOP_Figurer
 {
     abstract class Figur
     {
+        //Variabel
         public double Size;
 
-        public double GetAreal(double Size)
-        {
-            double areal = Size * Size;
-            return areal;
-        }
+        //Abstract Getareal
+        abstract public double GetAreal();
+
+        //Abstract Udskrivfigur
+        abstract public double UdskrivFigur();
     }
 }
